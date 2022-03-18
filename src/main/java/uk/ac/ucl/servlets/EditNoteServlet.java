@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/search")
-public class SearchServlet extends HttpServlet
+@WebServlet("/editNote")
+public class EditNoteServlet extends HttpServlet
 {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
@@ -23,7 +23,7 @@ public class SearchServlet extends HttpServlet
 
         // Invoke the JSP page.
         ServletContext context = getServletContext();
-        RequestDispatcher dispatch = context.getRequestDispatcher("/search.jsp");
+        RequestDispatcher dispatch = context.getRequestDispatcher("/editNote.jsp");
         dispatch.forward(request, response);
     }
 }

@@ -13,7 +13,7 @@ public class ModelFactory
 {
   private static Model model;
 
-  public static Model getModel() throws IOException
+  public static Model getModel(String path) throws IOException
   {
     if (model == null)
     {
@@ -21,7 +21,10 @@ public class ModelFactory
       // Note where the data file is stored in the data directory,
       // and the pathname to locate it. The data here is just some example data,
       // you replace it with your data file(s)
-      model.readFile(new File("./data/patients.csv"));
+      System.out.println(path);
+      model.readFile(path + "/data/");
+
+
     }
     return model;
   }
